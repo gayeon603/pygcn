@@ -7,7 +7,7 @@ class GCN(nn.Module):
     def __init__(self, nfeat, nhid, nclass, dropout):
         super(GCN, self).__init__()
 
-        self.gc1 = GraphConvolution(nfeat, nhid)
+        self.gc1 = GraphConvolution(nfeat, nhid) #nfeat: word attribute 차원, nhid: 16
         self.gc2 = GraphConvolution(nhid, nclass)
         self.dropout = dropout
 
